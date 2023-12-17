@@ -12,3 +12,104 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes theme-menu {
+  0% {
+    left: -21px;
+  }
+
+  100% {
+    left: -17px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    transform-origin: left center;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: left center;
+  }
+}
+
+@keyframes icon {
+  0% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.like-icon .main-body {
+  fill: var(--heart-main-body);
+  opacity: 0;
+  transition: opacity 0.3s linear, fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--text-color);
+  opacity: 1;
+  transition: opacity 0.3s linear 0.05s, fill 0.3s linear 0.05s;
+}
+
+.like-icon .core {
+  fill: var(--heart-main-body);
+  opacity: 0;
+  transition: opacity 0.3s linear 0.03s, fill 0.3s linear 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: var(--text-color);
+  opacity: 1;
+  transition: opacity 0.3s linear, fill 0.3s linear;
+}
+
+.like-icon:active .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: red;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  opacity: 1;
+  transition: opacity 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s 1 alternate;
+}
+
+.like-icon.is-liked .heart {
+  animation: icon 0.3s ease-in alternate 0.1s;
+  transform: scale(1, 1);
+}

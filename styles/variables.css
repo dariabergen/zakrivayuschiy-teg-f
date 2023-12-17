@@ -1,1 +1,19 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --main-font: 'Inter', sans-serif;
+    --decor-font: 'PressStart2P', sans-serif;
+    --width-clamp: clamp(375px, 50%, 696px);
+    --background-image: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007F0C, #004306);
+    --background-color: rgba(0, 0, 0, 1);
+    --heart-main-body: #000;
+    --text-color: #00CC14;
+    --focus-color: #00CC14;
+    --font-main-line-height: normal;
+    --font-main-text-transform: uppercase;
+    --heart-core: none;
+    --color-sparks: #FF0000;
+    --heart-contour: #00CC14;
+    --text-variable-weight: 785;
+    --basictext-variable-weight: 465;
+  } 
