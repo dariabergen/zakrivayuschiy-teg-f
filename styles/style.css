@@ -211,7 +211,7 @@
     flex-shrink: 0;
   }
 
-.button__OK {
+.button__ok {
     display: flex;
     justify-content: center;
     inline-size: 100%;
